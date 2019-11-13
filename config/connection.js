@@ -1,6 +1,9 @@
 // Import MySQL
 var mysql = require("mysql");
 
+// Import MySQL Connection Details Config
+//var conf = require("./conf.js");
+
 // Create empty connection object
 var connection;
 
@@ -8,7 +11,7 @@ var connection;
 if(process.env.JAWSDB_URL){
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else{
-  connection = mysql.createConnection(conf);
+  //connection = mysql.createConnection(conf);
 }
 
 // Connects to database.
