@@ -12,7 +12,7 @@
     "handlebars",
     "burger"
   ],
-  "author": "Sam Liput",
+  "author": "Talib S",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",

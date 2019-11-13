@@ -8,14 +8,16 @@ var mysql = require("mysql");
 var connection;
 
 // Creates Connection
-if(process.env.JAWSDB_URL){
-  connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else{
-  //connection = mysql.createConnection(conf);
-}
+connection = mysql.createConnection('mysql://ounbftbosqay3edk:ykfz4cgmssp5h8km@lolyz0ok3stvj6f0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/oy18o1vtsndj7kbu');
 
 // Connects to database.
-
+connection.connect(function(err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
+});
 
 // Exports connection module
 module.exports = connection;
