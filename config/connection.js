@@ -1,9 +1,6 @@
 // Import MySQL
 var mysql = require("mysql");
 
-// Import MySQL Connection Details Config
-var conf = require("./conf.js");
-
 // Create empty connection object
 var connection;
 
